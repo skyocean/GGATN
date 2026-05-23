@@ -156,30 +156,32 @@ GGATN includes multi level interpretability analysis for understanding how seque
 Supported analyses include:
 
 ### Global GAT Graph Attention Comparison across Training Regimes
-<img src="assets/correlation.png" width="600"/>
+<img src="assets/BPI20_gat_attention_panel.png" width="600"/>
+Comparison of global graph attention behavior under different training regimes, illustrating the stability and structural consistency of graph learned activity relationships.
 
 ### Position Level Dual Stage Attention Analysis
-<img src="assets/correlation.png" width="600"/>
+<img src="assets/BPI20_dual_stage_attention.png" width="600"/>
+Analysis of position level attention dynamics across the Transformer self attention stage and the graph grounded cross attention stage.
 
 ---
 
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/heatmap.png" width="300"/>
+      <img src="assets/sepsis_attention_mass.png" width="300"/>
       <div>
         <b>Graph Grounded Cross Attention Decomposition Analysis</b>
         <p style="text-align: justify;">
-          Heatmap applied for GAT-TDTE and GAT-TD showing how attention distributes across node positions and how this distribution shifts with sequence length.
+          Decomposition of graph grounded cross attention into admissible transitions, true next activities, and predicted next activities to analyze how graph structure influences sequence generation.
         </p>
       </div>
     </td>
     <td align="center" width="50%">
-      <img src="assets/noderankbar.png" width="300"/>
+      <img src="assets/helpdesk_refinement_shift.png" width="300"/>
       <div>
         <b>Refinement Based Activity Distribution Reshaping Analysis</b>
         <p style="text-align: justify;">
-          Bar chart applied for GAT-TDTE and GAT-TD showing how often each node appears in the Top-3 attention ranks across sequences, revealing consistent positional dominance patterns.
+          Visualization of how provisional activity distributions are reshaped through activity feedback refinement before final decoding.
         </p>
       </div>
     </td>
@@ -187,7 +189,8 @@ Supported analyses include:
 </table>
 
 ### Structured Decoding and Transition Correction Analysis
-<img src="assets/correlation.png" width="600"/>
+<img src="assets/BPI17_decoding_transition.png" width="600"/>
+Visualization of graph constrained Viterbi decoding and transition correction behavior during structured activity path recovery.
 
 ---
 
