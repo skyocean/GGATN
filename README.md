@@ -44,8 +44,9 @@ Install dependencies with:
 ```bash
 pip install -r requirements.txt
 ```
-```text
-Note: PyTorch Geometric installation may depend on the local PyTorch and CUDA configuration. Please follow the official PyTorch Geometric installation instructions if additional setup is required.```
+
+Note: PyTorch Geometric installation may depend on the local PyTorch and CUDA configuration. Please follow the official PyTorch Geometric installation instructions if additional setup is required.
+
 ---
 
 ## 🧩 Repository Structure
@@ -126,8 +127,9 @@ GGATN follows a graph sequence generation pipeline:
 ```text
 Global process graph (GAT encoder)
 Sequence Transformer encoder
-→ Graph grounded cross attention
-→ Activity feedback refinement + Graph constrained Viterbi decoding
+Graph grounded cross attention
+Multihead learning
+Activity feedback refinement + Graph constrained Viterbi decoding
 ```
 The model first learns graph based activity embeddings from observed transitions and temporal gap information. A Transformer encoder then contextualizes sequence positions, and graph grounded cross attention lets each position retrieve process aware activity representations from the learned graph.
 
@@ -153,11 +155,39 @@ GGATN includes multi level interpretability analysis for understanding how seque
 
 Supported analyses include:
 
-- Global GAT Graph Attention Comparision across Training Regimes  
-- Position Level Dual Stage Attention Analysis
-- Graph Grounded Cross Attention Decomposition Analysis
-- Refinement Based Activity Distribution Reshaping Analysis
-- Structured Decoding and Transition Correction
+### Global GAT Graph Attention Comparison across Training Regimes
+<img src="assets/correlation.png" width="600"/>
+
+### Position Level Dual Stage Attention Analysis
+<img src="assets/correlation.png" width="600"/>
+
+---
+
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/heatmap.png" width="300"/>
+      <div>
+        <b>Graph Grounded Cross Attention Decomposition Analysis</b>
+        <p style="text-align: justify;">
+          Heatmap applied for GAT-TDTE and GAT-TD showing how attention distributes across node positions and how this distribution shifts with sequence length.
+        </p>
+      </div>
+    </td>
+    <td align="center" width="50%">
+      <img src="assets/noderankbar.png" width="300"/>
+      <div>
+        <b>Refinement Based Activity Distribution Reshaping Analysis</b>
+        <p style="text-align: justify;">
+          Bar chart applied for GAT-TDTE and GAT-TD showing how often each node appears in the Top-3 attention ranks across sequences, revealing consistent positional dominance patterns.
+        </p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+### Structured Decoding and Transition Correction Analysis
+<img src="assets/correlation.png" width="600"/>
 
 ---
 
