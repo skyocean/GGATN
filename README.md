@@ -10,11 +10,17 @@
 
 ## 📖 Overview
 
-This repository implements **GGATN**, a graph grounded cross attention Transformer nerual network framework for full sequence generation in predictive business process monitoring (PBPM).
+This repository implements **GGATN**, a graph grounded cross attention Transformer neural network framework for full sequence generation in predictive business process monitoring (PBPM).
 
 GGATN generates complete event sequences, including activities, timestamps, attributes, sequence length, and explicit termination. The model combines a global process graph encoder, a sequence Transformer encoder, graph grounded cross attention, activity feedback refinement, and graph constrained Viterbi style decoding.
 
 The codebase includes training, generation, evaluation, local LLM baselines, ablation notebooks, and visualization utilities for interpreting how graph structure and sequence context affect generated event sequences.
+
+## 🏗️ GGATN Architecture
+
+<p align="center">
+  <img src="assets/model.jpg" width="900"/>
+</p>
 
 ### ✨ Key Features
 
@@ -125,11 +131,12 @@ The preprocessing workflow standardizes event logs into the input format expecte
 GGATN follows a graph sequence generation pipeline:
 
 ```text
-Global process graph (GAT encoder)
-Sequence Transformer encoder
-Graph grounded cross attention
-Multihead learning
-Activity feedback refinement + Graph constrained Viterbi decoding
+→ Global process graph (GAT encoder)
+→ Sequence Transformer encoder
+→ Graph grounded cross attention
+→ Cosine Prototype Decoding
+→ Activity feedback refinement
+→ Graph constrained Viterbi decoding
 ```
 The model first learns graph based activity embeddings from observed transitions and temporal gap information. A Transformer encoder then contextualizes sequence positions, and graph grounded cross attention lets each position retrieve process aware activity representations from the learned graph.
 
@@ -144,14 +151,14 @@ The repository supports evaluation at several levels.
 | Activity sequence quality | Sequence Coverage, Sequence similarity, Damerau Levenshtein similarity |
 | Control flow realism | Bigram Jensen Shannon distance |
 | Temporal plausibility | Duration distribution distance, timestamp error |
-| Attribute generation | Activity accuracy Event level categorical accuracy, event level numerical error, sequence level categorical accuracy, sequence level numerical error |
+| Attribute generation | Activity accuracy, Event level categorical accuracy, event level numerical error, sequence level categorical accuracy, sequence level numerical error |
 | Generation validity | Coverage, hallucinated activity rate, sequence level inconsistency rate |
 
 ---
 
 ## 🔍 Interpretability
 
-GGATN includes multi level interpretability analysis for understanding how sequence context and graph structure shape generated outputs.
+GGATN includes multi level interpretability analysis for understanding how sequence context, graph structure, and constrained decoding shape generated outputs.
 
 Supported analyses include:
 
