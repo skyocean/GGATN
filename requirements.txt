@@ -1,3 +1,4 @@
+torch
 torch-geometric
 scikit-learn
 pandas
@@ -8,3 +9,8 @@ plotly
 networkx
 pyxdameraulevenshtein
 scipy
+python-dateutil
+ollama
+jupyter
+notebook
+tqdm
