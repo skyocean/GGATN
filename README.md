@@ -1,4 +1,4 @@
-# Graph Grounded Cross Attention Transformer Neural Network for Full Sequence Generation in Predictive Business Process Monitoring
+# Graph Grounded Cross Attention Transformer Neural Network (GGATN): a Framework for Full Sequence Generation in Predictive Business Process Monitoring
 
 ***Graph grounded and interpretable sequence generation framework*** for full event sequence generation in predictive business process monitoring (PBPM). This repository implements GGATN, a Graph Grounded Cross Attention Transformer Neural Network that combines global process graph learning, Transformer based sequence contextualization, graph grounded cross attention, activity feedback refinement, and graph constrained structured decoding.
 
@@ -38,18 +38,14 @@ Recommended environment:
 - **Python:** 3.11 or later
 - **PyTorch**
 - **PyTorch Geometric**
-- **NumPy**
-- **Pandas**
-- **scikit learn**
-- **Matplotlib**
-- **NetworkX**
 
 Install dependencies with:
 
 ```bash
 pip install -r requirements.txt
 ```
-
+```text
+Note: PyTorch Geometric installation may depend on the local PyTorch and CUDA configuration. Please follow the official PyTorch Geometric installation instructions if additional setup is required.```
 ---
 
 ## 🧩 Repository Structure
