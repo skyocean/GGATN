@@ -163,11 +163,11 @@ GGATN includes multi level interpretability analysis for understanding how seque
 Supported analyses include:
 
 ### Global GAT Graph Attention Comparison across Training Regimes
-<img src="assets/BPI20_gat_attention_panel.png" width="600"/>
+<img src="assets/BPI20_gat_attention_panel.png" width="900"/>
 Comparison of global graph attention behavior under different training regimes, illustrating the stability and structural consistency of graph learned activity relationships.
 
 ### Position Level Dual Stage Attention Analysis
-<img src="assets/BPI20_dual_stage_attention.png" width="600"/>
+<img src="assets/BPI20_dual_stage_attention.png" width="900"/>
 Analysis of position level attention dynamics across the Transformer self attention stage and the graph grounded cross attention stage.
 
 ---
@@ -175,7 +175,7 @@ Analysis of position level attention dynamics across the Transformer self attent
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/sepsis_attention_mass.png" width="300"/>
+      <img src="assets/sepsis_attention_mass.png" width="450"/>
       <div>
         <b>Graph Grounded Cross Attention Decomposition Analysis</b>
         <p style="text-align: justify;">
@@ -184,7 +184,7 @@ Analysis of position level attention dynamics across the Transformer self attent
       </div>
     </td>
     <td align="center" width="50%">
-      <img src="assets/helpdesk_refinement_shift.png" width="300"/>
+      <img src="assets/helpdesk_refinement_shift.png" width="450"/>
       <div>
         <b>Refinement Based Activity Distribution Reshaping Analysis</b>
         <p style="text-align: justify;">
@@ -196,7 +196,7 @@ Analysis of position level attention dynamics across the Transformer self attent
 </table>
 
 ### Structured Decoding and Transition Correction Analysis
-<img src="assets/BPI17_decoding_transition.png" width="600"/>
+<img src="assets/BPI17_decoding_transition.png" width="900"/>
 Visualization of graph constrained Viterbi decoding and transition correction behavior during structured activity path recovery.
 
 ---
