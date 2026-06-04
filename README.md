@@ -1,6 +1,6 @@
-# Graph Grounded Cross Attention Transformer Neural Network (GGATN): a Framework for Full Sequence Generation in Predictive Business Process Monitoring
+# Graph Grounded Cross Attention Transformer Neural Network for Structurally Constrained Full Event Sequence Generation in Predictive Process Monitoring. 
 
-***Graph grounded and interpretable sequence generation framework*** for full event sequence generation in predictive business process monitoring (PBPM). This repository implements GGATN, a Graph Grounded Cross Attention Transformer Neural Network that combines global process graph learning, Transformer based sequence contextualization, graph grounded cross attention, activity feedback refinement, and graph constrained structured Viterbi decoding.
+***Graph grounded and interpretable sequence generation framework*** for full event sequence generation in predictive process monitoring (PPM). This repository implements GGATN, a Graph Grounded Cross Attention Transformer Neural Network that combines global process graph learning, Transformer based sequence contextualization, graph grounded cross attention, activity feedback refinement, and graph constrained structured Viterbi decoding.
 
 **Authors**: Fang Wang (Florence Wong), Ernesto Damiani  
 
@@ -269,9 +269,8 @@ If you use this code or model, please cite the associated paper:
 
 ```bibtex
 @article{wang2026ggatn,
-  title={Graph Grounded Cross Attention Transformer Neural Network: A Framework for Full Sequence Generation in Predictive Business Process Monitoring},
+  title={Graph Grounded Cross Attention Transformer Neural Network for Structurally Constrained Full Event Sequence Generation in Predictive Process Monitoring},
   author={Wang, Fang and Damiani, Ernesto},
-  journal={Expert Systems with Applications},
   year={2026},
   note={Under review}
 }
