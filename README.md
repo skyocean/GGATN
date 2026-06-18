@@ -271,8 +271,11 @@ If you use this code or model, please cite the associated paper:
 @article{wang2026ggatn,
   title={Graph Grounded Cross Attention Transformer Neural Network for Structurally Constrained Full Event Sequence Generation in Predictive Process Monitoring},
   author={Wang, Fang and Damiani, Ernesto},
-  year={2026},
-  note={Under review}
+  year = {2026},
+  eprint = {2606.18726},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG},
+  url = {https://arxiv.org/abs/2606.18726}
 }
 ```
 
